@@ -16,5 +16,3 @@ Si bien es cierto que, por lo que es más conocido es por la inyección de depen
 Links:
 * [https://spring.io/](https://spring.io/)
 * [https://www.arquitecturajava.com/](https://www.arquitecturajava.com/)
-* []()
-* []()
