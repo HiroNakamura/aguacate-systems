@@ -1,10 +1,13 @@
 package com.aguacate.aguacate.model;
 
+import com.aguacate.aguacate.genericos.Generica;
+
 public abstract class GenericaBean<T> implements Generica<T>{
     
     private Class<T> clase;
 
-    public GenericaBean<T>(Class<T> clase){
+
+    public void setClase(Class<T> clase){
         this.clase = clase;
     }
 
