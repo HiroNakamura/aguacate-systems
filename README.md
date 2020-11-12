@@ -14,7 +14,7 @@ Links útiles:
 
 * [HOW TO DO JAVA](https://howtodoinjava.com)
 
-* [JAVA GUIDES](https://javaguides.net)
+* [JAVA GUIDES](http://javaguides.net)
 
 * [JAVA REVISITED](https://javarevisited.blogspot.com)
 
