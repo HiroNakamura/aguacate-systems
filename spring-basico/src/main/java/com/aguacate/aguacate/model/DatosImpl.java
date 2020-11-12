@@ -4,6 +4,7 @@ package com.aguacate.aguacate.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import com.aguacate.aguacate.interfaces.Datos;
 
 public class DatosImpl implements Datos{
 
