@@ -10,6 +10,10 @@ import com.aguacate.aguacate.configurator.Configurator;
 import com.aguacate.aguacate.interfaces.Datos;
 import com.aguacate.aguacate.interfaces.Greeter;
 import com.aguacate.aguacate.interfaces.Generador;
+import com.aguacate.aguacate.model.Contenedor;
+import com.aguacate.aguacate.model.Alumno;
+import com.aguacate.aguacate.model.AlumnoBean;
+
 
 @SpringBootApplication
 public class AguacateApplication {
@@ -19,6 +23,11 @@ public class AguacateApplication {
 		testA();
 		testB();
 		testC();
+		testD();
+	}
+
+	public static void testD(){
+		
 	}
 
 	public static void testC(){

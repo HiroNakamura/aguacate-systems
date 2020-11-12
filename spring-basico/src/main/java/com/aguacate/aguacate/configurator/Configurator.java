@@ -13,8 +13,11 @@ import com.aguacate.aguacate.model.GeneradorPDF;
 import com.aguacate.aguacate.interfaces.Generador;
 
 
+
 @Configuration
 public class Configurator{
+
+    
 
     @Bean(name="datosBean")
     public Datos datos() {
