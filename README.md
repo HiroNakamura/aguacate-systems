@@ -42,6 +42,7 @@ Links útiles:
 
 * [PETRIKAINULAINEN](https://www.petrikainulainen.net/)
 
+* [JAVA TECH ONLINE](https://javatechonline.com/)
 
 
 [Editor de la página](https://github.com/HiroNakamura/aguacate-systems/edit/gh-pages/index.md)

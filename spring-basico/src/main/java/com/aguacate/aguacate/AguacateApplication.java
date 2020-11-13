@@ -19,10 +19,10 @@ import com.aguacate.aguacate.model.AlumnoBean;
 public class AguacateApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(AguacateApplication.class, args);
-		testA();
-		testB();
-		testC();
+		SpringApplication.run(AguacateApplication.class, args);
+		//testA();
+		//testB();
+		//testC();
 		testD();
 	}
 
