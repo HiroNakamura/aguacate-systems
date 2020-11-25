@@ -1,6 +1,6 @@
-# Spring Boot 
+# Spring Framework & Boot 
 
-## Programando con Spring Boot
+## Programando con Spring Framework & Boot
 
 **Spring Framework** es un framework Open Source que facilita la creación de aplicaciones de todo tipo en Java, Kotlin y Groovy.
 

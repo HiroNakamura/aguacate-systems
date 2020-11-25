@@ -12,12 +12,15 @@ import com.aguacate.aguacate.model.GeneradorXML;
 import com.aguacate.aguacate.model.GeneradorPDF;
 import com.aguacate.aguacate.interfaces.Generador;
 
-
+import com.aguacate.aguacate.model.HolaMundo;
 
 @Configuration
 public class Configurator{
-
     
+    @Bean(name="holaMundoBean")
+    public HolaMundo holaMundoBean() {
+        return new HolaMundo();
+    }
 
     @Bean(name="datosBean")
     public Datos datos() {
