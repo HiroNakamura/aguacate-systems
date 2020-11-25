@@ -70,6 +70,14 @@ public class AguacateApplication {
 		holaMundo.setSaludo("General Arteaga");
 		System.out.println("Hola, "+holaMundo.getSaludo());
 
+		AnnotationConfigApplicationContext contextConfig = new AnnotationConfigApplicationContext();
+		contextConfig.register(Configurator.class);
+		contextConfig.refresh();
+
+		HolaMundo holaMundoTwo = (HolaMundo) context.getBean("holaMundoBean");
+		holaMundoTwo.setSaludo("General Dominguez");
+		System.out.println("Hola, "+holaMundoTwo.getSaludo());
+
 		((ConfigurableApplicationContext)context).close();
 	}
 
