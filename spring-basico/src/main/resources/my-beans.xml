@@ -5,17 +5,16 @@
 <bean id="modeloBean" class="com.aguacate.aguacate.model.Modelo">
       <property name="valor" value="1890"></property>
       <property name="nombre" value="Thomahak M212"></property>
-      <property name="numeros" value-type="java.lang.String">
-        <util:list>
+      <property name="numeros">
+        <util:list value-type="java.lang.String">
           <value>1</value>
           <value>2</value>
         </util:list>
       </property>
       <property name="claves">
-      <util:map map-class="java.util.HashMap">
-         <entry key="1" value="Uno">
-         <entry key="2" value="Dos">
-      </util:mapp>
+      <util:map map-class="java.util.HashMap" key-type="java.lang.Integer" value-type="java.lang.String">
+         <entry key="1200" value="Mil doscientos"/>
+      </util:map>
       </property>
     </bean>
 
