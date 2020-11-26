@@ -9,11 +9,14 @@
         <util:list value-type="java.lang.String">
           <value>1</value>
           <value>2</value>
+          <value>3</value>
+          <value>4</value>
         </util:list>
       </property>
       <property name="claves">
       <util:map map-class="java.util.HashMap" key-type="java.lang.Integer" value-type="java.lang.String">
          <entry key="1200" value="Mil doscientos"/>
+         <entry key="1500" value="Mil quinientos"/>
       </util:map>
       </property>
     </bean>

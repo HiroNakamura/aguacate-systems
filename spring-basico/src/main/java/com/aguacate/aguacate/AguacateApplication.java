@@ -44,6 +44,9 @@ public class AguacateApplication {
 		Alumno alumnoBean = (Alumno) context.getBean("alumnoBeanTwo");
 		System.out.println(alumnoBean);
 
+		alumnoBean = (Alumno) context.getBean("alumnoBeanThree");
+		System.out.println(alumnoBean);
+
 		String documento = "MiDocumento.pdf";
 		context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		Contenedor contenedor = (Contenedor) context.getBean("contenedorBean");

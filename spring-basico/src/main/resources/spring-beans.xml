@@ -24,4 +24,11 @@
     </bean>
 
 
+    <bean id="alumnoBeanThree" class="com.aguacate.aguacate.model.Alumno">
+       <constructor-arg value="1230"></constructor-arg>
+       <constructor-arg value="Ignacio Sanchez"></constructor-arg>
+       <constructor-arg value="22"></constructor-arg>
+    </bean>
+
+
 </beans>
