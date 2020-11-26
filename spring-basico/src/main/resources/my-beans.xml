@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> 
+
+
+<bean id="modeloBean" class="com.aguacate.aguacate.model.Modelo">
+      <property name="valor" value="1890"></property>
+      <property name="nombre" value="Thomahak M212"></property>
+      <property name="numeros" value-type="java.lang.String">
+        <util:list>
+          <value>1</value>
+          <value>2</value>
+        </util:list>
+      </property>
+      <property name="claves">
+      <util:map map-class="java.util.HashMap">
+         <entry key="1" value="Uno">
+         <entry key="2" value="Dos">
+      </util:mapp>
+      </property>
+    </bean>
+
+
+
+</beans>

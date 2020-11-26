@@ -23,22 +23,5 @@
       <constructor-arg ref="generadorPDFBeanTwo" />
     </bean>
 
-    <bean id="modeloBean" class="com.aguacate.aguacate.model.Modelo">
-      <property name="valor" value="1890"></property>
-      <property name="nombre" value="Thomahak M212"></property>
-      <property name="numeros">
-        <list>
-          <value>1</value>
-          <value>2</value>
-        </list>
-      </property>
-      <property name="claves">
-      <map>
-         <entry key=1 value="Uno">
-         <entry key=2 value="Dos">
-      </map>
-      </property>
-    </bean>
-    
 
 </beans>

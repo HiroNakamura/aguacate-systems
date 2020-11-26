@@ -1,7 +1,6 @@
 package com.aguacate.aguacate.model;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +9,7 @@ public class Modelo{
     private int valor;
     private String nombre;
     private List<String> numeros;
-    private Map<Integer, String> claves;
+    private HashMap<Integer, String> claves;
 
     public Modelo(){
         numeros = new ArrayList<>();
@@ -41,11 +40,11 @@ public class Modelo{
         this.numeros = numeros;
     }
 
-    public Map<Integer, String> getClaves(){
+    public HashMap<Integer, String> getClaves(){
         return claves;
     }
 
-    public void setClaves(Map<Integer, String> claves){
+    public void setClaves(HashMap<Integer, String> claves){
         this.claves = claves;
     }
 

@@ -49,7 +49,7 @@ public class AguacateApplication {
 		Contenedor contenedor = (Contenedor) context.getBean("contenedorBean");
 		contenedor.generar(documento);
 
-		context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		context = new ClassPathXmlApplicationContext("my-beans.xml");
 		Modelo modelo = (Modelo) context.getBean("modeloBean");
 		System.out.println(modelo);
 		
