@@ -25,7 +25,7 @@ public class Modelo{
         this.valor = valor;
     }
     
-    public int getNombre(){
+    public String getNombre(){
         return nombre;
     }
 
@@ -33,7 +33,7 @@ public class Modelo{
         this.nombre = nombre;
     }
 
-    public int getNumeros(){
+    public List<String> getNumeros(){
         return numeros;
     }
 
@@ -41,7 +41,7 @@ public class Modelo{
         this.numeros = numeros;
     }
 
-    public int getClaves(){
+    public Map<Integer, String> getClaves(){
         return claves;
     }
 

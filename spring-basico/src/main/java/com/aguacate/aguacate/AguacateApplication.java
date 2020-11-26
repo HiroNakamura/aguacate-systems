@@ -30,13 +30,9 @@ public class AguacateApplication {
 		//testA();
 		//testB();
 		//testC();
-		//testD();
-		testE();
+		testD();
 	}
 
-	public static void testE(){
-
-	}
 
 	public static void testD(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
@@ -53,6 +49,9 @@ public class AguacateApplication {
 		Contenedor contenedor = (Contenedor) context.getBean("contenedorBean");
 		contenedor.generar(documento);
 
+		context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		Modelo modelo = (Modelo) context.getBean("modeloBean");
+		System.out.println(modelo);
 		
 		((ConfigurableApplicationContext)context).close();
 	}
