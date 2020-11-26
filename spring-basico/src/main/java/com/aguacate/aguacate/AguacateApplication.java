@@ -17,7 +17,7 @@ import com.aguacate.aguacate.model.Contenedor;
 import com.aguacate.aguacate.model.Alumno;
 import com.aguacate.aguacate.model.AlumnoBean;
 import com.aguacate.aguacate.model.HolaMundo;
-
+import com.aguacate.aguacate.model.Contenedor;
 
 @SpringBootApplication
 public class AguacateApplication {
@@ -26,10 +26,10 @@ public class AguacateApplication {
 		//Esto se comenta cuando se usa XML
 		//SpringApplication.run(AguacateApplication.class, args);
 		
-		testA();
+		//testA();
 		//testB();
 		//testC();
-		//testD();
+		testD();
 	}
 
 	public static void testD(){
@@ -41,6 +41,12 @@ public class AguacateApplication {
 		context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		Alumno alumnoBean = (Alumno) context.getBean("alumnoBeanTwo");
 		System.out.println(alumnoBean);
+
+		String documento = "MiDocumento.pdf";
+		context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		Contenedor contenedor = (Contenedor) context.getBean("contenedorBean");
+		contenedor.generar(documento);
+
 		
 		((ConfigurableApplicationContext)context).close();
 	}
