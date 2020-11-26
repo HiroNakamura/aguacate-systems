@@ -18,6 +18,7 @@ import com.aguacate.aguacate.model.Alumno;
 import com.aguacate.aguacate.model.AlumnoBean;
 import com.aguacate.aguacate.model.HolaMundo;
 import com.aguacate.aguacate.model.Contenedor;
+import com.aguacate.aguacate.model.Modelo;
 
 @SpringBootApplication
 public class AguacateApplication {
@@ -29,7 +30,12 @@ public class AguacateApplication {
 		//testA();
 		//testB();
 		//testC();
-		testD();
+		//testD();
+		testE();
+	}
+
+	public static void testE(){
+
 	}
 
 	public static void testD(){
