@@ -5,11 +5,11 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="holaMundoBean" class="com.aguacate.aguacate.model.HolaMundo">
+    <bean id="holaMundoBean" class="com.aguacate.aguacate.model.HolaMundo" init-method="init" destroy-method="destroy">
        <property name="saludo" value="Juan Carlos"></property>
     </bean>
 
-    <bean id="alumnoBeanTwo" class="com.aguacate.aguacate.model.Alumno">
+    <bean id="alumnoBeanTwo" class="com.aguacate.aguacate.model.Alumno" init-method="init" destroy-method="destroy">
        <property name="cedula" value="${cedula}"></property>
        <property name="nombre" value="${nombre}"></property>
        <property name="edad" value="${edad}"></property>
@@ -24,7 +24,7 @@
     </bean>
 
 
-    <bean id="alumnoBeanThree" class="com.aguacate.aguacate.model.Alumno">
+    <bean id="alumnoBeanThree" class="com.aguacate.aguacate.model.Alumno" init-method="init" destroy-method="destroy">
        <constructor-arg value="1230"></constructor-arg>
        <constructor-arg value="Ignacio Sanchez"></constructor-arg>
        <constructor-arg value="22"></constructor-arg>

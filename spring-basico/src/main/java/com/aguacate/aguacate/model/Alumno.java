@@ -20,6 +20,14 @@ public class Alumno{
         this.nombre = nombre;
     }
 
+    public void init(){
+        System.out.println("Se inicia bean Alumno");
+    }
+
+    public void destroy(){
+        System.out.println("Se destruye bean Alumno");
+    }
+
     public void setCedula(int cedula) {
         this.cedula = cedula;
     }
