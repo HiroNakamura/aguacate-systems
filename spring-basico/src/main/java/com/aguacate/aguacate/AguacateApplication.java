@@ -19,6 +19,9 @@ import com.aguacate.aguacate.model.AlumnoBean;
 import com.aguacate.aguacate.model.HolaMundo;
 import com.aguacate.aguacate.model.Contenedor;
 import com.aguacate.aguacate.model.Modelo;
+import com.aguacate.aguacate.model.Individuo;
+import com.aguacate.aguacate.contenedor.ContenedorServ;
+
 
 @SpringBootApplication
 public class AguacateApplication {
@@ -30,7 +33,27 @@ public class AguacateApplication {
 		//testA();
 		//testB();
 		//testC();
-		testD();
+		//testD();
+		testE();
+	}
+
+	public static void testE(){
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		Individuo individuo = (Individuo) context.getBean("individuoBean");
+		System.out.println(individuo);
+
+		individuo = (Individuo) context.getBean("individuoBeanTwo");
+		System.out.println(individuo);
+
+		context = new ClassPathXmlApplicationContext("my-beans.xml");
+		ContenedorServ contenedor = (ContenedorServ) context.getBean("contenedorServBean");
+		contenedor.ejecutar();
+
+		contenedor = (ContenedorServ) context.getBean("contenedorServBeanTwo");
+		contenedor.ejecutar();
+
+		((ConfigurableApplicationContext)context).close();
+
 	}
 
 
@@ -55,6 +78,18 @@ public class AguacateApplication {
 		context = new ClassPathXmlApplicationContext("my-beans.xml");
 		Modelo modelo = (Modelo) context.getBean("modeloBean");
 		System.out.println(modelo);
+
+		context = new ClassPathXmlApplicationContext("my-beans.xml");
+		alumnoBean = (Alumno) context.getBean("alumnoBeanFour");
+		System.out.println(alumnoBean);
+
+		context = new ClassPathXmlApplicationContext("my-beans.xml");
+		alumnoBean = (Alumno) context.getBean("alumnoBeanFive");
+		System.out.println(alumnoBean);
+
+		context = new ClassPathXmlApplicationContext("my-beans.xml");
+		alumnoBean = (Alumno) context.getBean("alumnoBeanSix");
+		System.out.println(alumnoBean);
 		
 		((ConfigurableApplicationContext)context).close();
 	}

@@ -21,6 +21,36 @@
       </property>
     </bean>
 
+<bean id="alumnoBeanFour" class="com.aguacate.aguacate.model.Alumno">
+    <constructor-arg value="1093"></constructor-arg>
+    <constructor-arg value="Jaime Archundia"></constructor-arg>
+    <constructor-arg value="37"></constructor-arg>
+</bean>
+
+<bean id="alumnoBeanFive" class="com.aguacate.aguacate.model.Alumno">
+    <constructor-arg type="int" value="1123"></constructor-arg>
+    <constructor-arg type="String" value="Juliana Torres Vera"></constructor-arg>
+</bean>
+
+<bean id="alumnoBeanSix" class="com.aguacate.aguacate.model.Alumno">
+    <constructor-arg index="0" value="1143"></constructor-arg>
+    <constructor-arg index="1" value="Horacio Alcantara Contreras"></constructor-arg>
+    <constructor-arg index="2" value="26"></constructor-arg>
+</bean>
+
+
+ <bean id="puertaBean" class="com.aguacate.aguacate.interfaces.impl.Puerta" init-method="init" destroy-method="destroy" />
+
+  <bean id="contenedorServBean" class="com.aguacate.aguacate.contenedor.ContenedorServ">
+    <property name="servicio" ref="puertaBean" />
+  </bean>
+
+  <bean id="botellaBean" class="com.aguacate.aguacate.interfaces.impl.Botella" init-method="init" destroy-method="destroy"/>
+
+  <bean id="contenedorServBeanTwo" class="com.aguacate.aguacate.contenedor.ContenedorServ">
+    <property name="servicio" ref="botellaBean" />
+  </bean>
+
 
 
 </beans>

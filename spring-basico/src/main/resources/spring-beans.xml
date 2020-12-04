@@ -30,5 +30,37 @@
        <constructor-arg value="22"></constructor-arg>
     </bean>
 
+    <bean id="ciudadBean" class="com.aguacate.aguacate.model.Ciudad">
+       <constructor-arg value="Copenhague"></constructor-arg>
+    </bean>
+
+    <bean id="paisBean" class="com.aguacate.aguacate.model.Pais">
+       <property name="nombre" value="Dinamarca"></property>
+       <property name="ciudad" ref="ciudadBean"></property>
+    </bean>
+
+    <bean id="individuoBean" class="com.aguacate.aguacate.model.Individuo">
+       <constructor-arg index="0" value="1092"></constructor-arg>
+       <constructor-arg index="1" value="Camilia Dourmong"></constructor-arg>
+       <property name="pais" ref="paisBean"></property>
+    </bean>
+
+
+
+    <bean id="individuoBeanTwo" class="com.aguacate.aguacate.model.Individuo">
+       <constructor-arg index="0" value="1245"></constructor-arg>
+       <constructor-arg index="1" value="Thomas Mann"></constructor-arg>
+       <property name="pais">
+            <bean id="paisBeanTwo" class="com.aguacate.aguacate.model.Pais">
+                <property name="nombre" value="Canada"></property>
+                <property name="ciudad">
+                  <bean id="ciudadBeanTwo" class="com.aguacate.aguacate.model.Ciudad">
+                    <constructor-arg value="Montreal"></constructor-arg>
+                  </bean>
+                </property>
+            </bean>
+       </property>
+    </bean>
+
 
 </beans>

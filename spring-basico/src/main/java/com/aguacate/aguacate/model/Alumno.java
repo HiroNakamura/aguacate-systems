@@ -14,6 +14,12 @@ public class Alumno{
         this.edad = edad;
     }
 
+    public Alumno(int cedula, String nombre){
+        super();
+        this.cedula = cedula;
+        this.nombre = nombre;
+    }
+
     public void setCedula(int cedula) {
         this.cedula = cedula;
     }
