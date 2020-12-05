@@ -20,6 +20,7 @@ import com.aguacate.aguacate.model.HolaMundo;
 import com.aguacate.aguacate.model.Contenedor;
 import com.aguacate.aguacate.model.Modelo;
 import com.aguacate.aguacate.model.Individuo;
+import com.aguacate.aguacate.model.Empresa;
 import com.aguacate.aguacate.contenedor.ContenedorServ;
 
 
@@ -51,6 +52,10 @@ public class AguacateApplication {
 
 		contenedor = (ContenedorServ) context.getBean("contenedorServBeanTwo");
 		contenedor.ejecutar();
+
+		context = new ClassPathXmlApplicationContext("spring-beans.xml");
+		Empresa empresa = (Empresa) context.getBean("empresaBean");
+		System.out.println(empresa);
 
 		((ConfigurableApplicationContext)context).close();
 

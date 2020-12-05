@@ -52,17 +52,6 @@
   </bean>
 
    
-   <bean id="mySiteBean" class="com.aguacate.aguacate.model.MySite" init-method="init" destroy-method="destroy"> 
-       <constructor-arg index="0" value="${url}"></constructor-arg>
-       <constructor-arg index="1" value="${site}"></constructor-arg>
-   </bean>
-
-   <bean id="empresaBean" class="com.aguacate.aguacate.model.Empresa" init-method="init" destroy-method="destroy"> 
-        <property name="nombre" value="${empresa}"></property>
-        <property name="mySite" ref="mySiteBean"></property>
-   </bean>
-
-  <context:property-placeholder location="application.properties" />
-  <context:component-scan base-package="com.aguacate.aguacate.model.*"/>
+  
 
 </beans>

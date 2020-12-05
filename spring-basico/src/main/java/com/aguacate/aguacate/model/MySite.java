@@ -38,7 +38,7 @@ public class MySite{
 
     @Override
     public String toString(){
-        return this.url +" : "+this.nombre;
+        return this.url +" , "+this.nombre;
     }
 
 }

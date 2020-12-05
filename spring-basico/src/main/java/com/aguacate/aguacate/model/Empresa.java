@@ -6,7 +6,7 @@ public class Empresa{
 
     public Empresa(){}
 
-    public Empresa(String nombre, String mySite){
+    public Empresa(String nombre, MySite mySite){
         super();
         this.mySite = mySite;
         this.nombre = nombre;
@@ -38,7 +38,7 @@ public class Empresa{
 
     @Override
     public String toString(){
-        return this.nombre +", URL: "+this.mySite;
+        return this.nombre +", "+this.mySite;
     }
 
 }
