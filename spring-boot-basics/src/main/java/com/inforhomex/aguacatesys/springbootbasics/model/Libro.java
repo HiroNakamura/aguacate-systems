@@ -46,7 +46,7 @@ public class Libro {
     }
 
     public String getAutor(){
-        return autor
+        return autor;
     }
 
     public void setAutor(String autor){
@@ -71,21 +71,14 @@ public class Libro {
     
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder("Libro{");
-        sb.append("id:")
-        .sb.append(this.id)
-        .sb.append(", titulo: ")
-        .sb.append(this.titulo)
-        .sb.append(", isbn: ")
-        .sb.append(this.isbn)
-        .sb.append(", autor: ")
-        .sb.append(this.autor)
-        .sb.append(", editorial: ")
-        .sb.append(this.editorial)
-        .sb.append(", paginas")
-        .sb.append(this.paginas)
-        .sb.append("}");
-        return sb.toString();
+        return "Libro{id: "+this.id+", titulo: "
+        +this.titulo+", isbn: "+this.isbn
+        +", autor: "+this.autor
+        +", editorial: "
+        +this.editorial
+        +", paginas: "
+        +this.paginas
+        +"}";
     }
 
 }

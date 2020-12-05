@@ -4,7 +4,7 @@ import java.util.List;
 import com.inforhomex.aguacatesys.springbootbasics.model.Libro;
 
 public interface LibroDAO {
-	Libro getLibroById(Long id);
+	Libro getLibroById(int id);
 	List<Libro> getAllLibros();
 	boolean deleteLibro(Libro libro);
 	boolean updateLibro(Libro libro);

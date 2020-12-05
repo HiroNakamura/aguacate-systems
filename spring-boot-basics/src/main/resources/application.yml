@@ -18,20 +18,20 @@ spring:
 
 
 #Postgres
-#spring:
-#   datasource:
-#      url: jdbc:postgresql://localhost:5432/curso
-#      username: postgres
-#      password: 5432
-#      initialization-mode: always
-#      initialize: true
-#      schema: #classpath:/schema.sql
-#      continue-on-error: true
+spring:
+   datasource:
+      url: jdbc:postgresql://localhost:5432/curso
+      username: postgres
+      password: 5432
+      initialization-mode: always
+      initialize: true
+      schema: #classpath:/schema.sql
+      continue-on-error: true
 
-driver: org.postgresql.Driver
-url: jdbc:postgresql://127.0.0.1:5432/curso
-dbuser: postgres
-dbpassword: 5432
+#driver: org.postgresql.Driver
+#url: jdbc:postgresql://127.0.0.1:5432/curso
+#dbuser: postgres
+#dbpassword: 5432
 
 
 #spring.jpa.hibernate.ddl-auto=update

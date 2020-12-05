@@ -12,7 +12,8 @@ import com.inforhomex.aguacatesys.springbootbasics.model.LibroMapper;
 
 @Component
 public class LibroDAOImpl implements LibroDAO{
-    JdbcTemplate jdbcTemplate;
+
+    private JdbcTemplate jdbcTemplate;
 
     private final String SQL_FIND_LIBRO = "select * from public.libro where id = ?";
 	private final String SQL_DELETE_LIBRO = "delete from public.libro where id = ?";
@@ -22,29 +23,27 @@ public class LibroDAOImpl implements LibroDAO{
 
 	@Autowired
 	public LibroDAOImpl(DataSource dataSource) {
-		jdbcTemplate = new JdbcTemplate(dataSource);
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
 	public Libro getLibroById(int id) {
-		return jdbcTemplate.queryForObject(SQL_FIND_LIBRO, new Object[] { id }, new LibroMapper());
+		return null;//jdbcTemplate.queryForObject(SQL_FIND_LIBRO, new Object[] { id }, new LibroMapper());
 	}
 
 	public List<Libro> getAllLibros() {
-		return jdbcTemplate.query(SQL_GET_ALL, new LibroMapper());
+		return null;//jdbcTemplate.query(SQL_GET_ALL, new LibroMapper());
 	}
 
 	public boolean deleteLibro(Libro libro) {
-		return jdbcTemplate.update(SQL_DELETE_LIBRO, libro.getId()) > 0;
+		return false;//jdbcTemplate.update(SQL_DELETE_LIBRO, libro.getId()) > 0;
 	}
 
 	public boolean updateLibro(Libro libro) {
-		return jdbcTemplate.update(SQL_UPDATE_LIBRO, libro.getFirstName(), person.getLastName(), person.getAge(),
-				person.getId()) > 0;
+		return false;//jdbcTemplate.update(SQL_UPDATE_LIBRO, libro.getFirstName(), person.getLastName(), person.getAge(),person.getId()) > 0;
 	}
 
 	public boolean createLibro(Libro libro) {
-		return jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getId(), person.getFirstName(), person.getLastName(),
-				person.getAge()) > 0;
+		return false;//jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getId(), person.getFirstName(), person.getLastName(),person.getAge()) > 0;
 	}
-}
+
 }
