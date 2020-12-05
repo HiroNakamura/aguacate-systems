@@ -1,0 +1,17 @@
+#BANNER
+banner:
+   charset: UTF-8
+   location: banner.txt
+
+server:
+  port : 8081
+
+spring:
+   thymeleaf:
+     cache: false
+     check-template: true
+     check-template-location: true
+     content-type: text/html
+     enabled: true
+     encoding: UTF-8
+     suffix: .html

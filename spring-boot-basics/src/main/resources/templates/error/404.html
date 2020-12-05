@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>404</title>
+  <style type="text/css">
+  	p.color{
+      font-size: 324px;
+      position: relative;
+      top: -1041px;
+      left: 461px;
+      color: #B40486;
+  	}
+
+  	p.sombra{
+  		font-size: 322px; 
+      position: relative; 
+      top: -344px; 
+      left: 472px; 
+      color: #000000;
+  	}
+
+  	#error{
+  		position: relative;
+  		top: -1409px;
+  		left: 402px;
+  		font-size: 40px;
+  		font-family: Courier;
+  	}
+
+  	body{
+          background-color: #F7FE2E;
+          height: 100%;
+          overflow: hidden;
+    }
+    
+    #regreso{
+      position: relative;
+      top: -1381px;
+      left: 50%;
+    }
+
+    #regreso a{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: #585858;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+  </style>
+  </head>
+  <body>
+  <p class="sombra">404</p>
+  <p class="color">404</p>
+ 
+  <span id="error">Error, recurso no encontrado.</span>
+  <div id="regreso"><a th:href="@{/home}"> >>Regresar al home</a></div>
+  </body>
+  </html>
