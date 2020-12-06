@@ -1,5 +1,8 @@
 package com.aguacate.aguacate.model;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 
 public class Individuo{
     private int id;
@@ -19,6 +22,16 @@ public class Individuo{
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
+    }
+
+    @PostConstruct
+    public void init(){
+        System.out.println("Se inicia bean Individuo!!!");
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Se destruye bean Individuo!!!");
     }
 
     public int getId(){
