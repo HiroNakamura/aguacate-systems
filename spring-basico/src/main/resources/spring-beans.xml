@@ -17,6 +17,7 @@
 
     <context:property-placeholder location="application.properties" />
     <context:component-scan base-package="com.aguacate.aguacate.model.*"/>
+    <context:component-scan base-package="com.aguacate.aguacate.*"/>
 
     <bean id="generadorPDFBeanTwo" class="com.aguacate.aguacate.model.GeneradorPDF"/>
     <bean id="contenedorBean" class="com.aguacate.aguacate.model.Contenedor">
