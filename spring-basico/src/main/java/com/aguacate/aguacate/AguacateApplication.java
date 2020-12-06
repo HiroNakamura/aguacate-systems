@@ -21,6 +21,8 @@ import com.aguacate.aguacate.model.Contenedor;
 import com.aguacate.aguacate.model.Modelo;
 import com.aguacate.aguacate.model.Individuo;
 import com.aguacate.aguacate.model.Empresa;
+import com.aguacate.aguacate.model.Imagen;
+import com.aguacate.aguacate.model.X;
 import com.aguacate.aguacate.contenedor.ContenedorServ;
 
 
@@ -56,6 +58,12 @@ public class AguacateApplication {
 		context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		Empresa empresa = (Empresa) context.getBean("empresaBean");
 		System.out.println(empresa);
+
+		Imagen imagen = (Imagen) context.getBean("imagenBean");
+		System.out.println(imagen);
+
+		X my_x = (X) context.getBean("myBeanX");
+		System.out.println(my_x);
 
 		((ConfigurableApplicationContext)context).close();
 

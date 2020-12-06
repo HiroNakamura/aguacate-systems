@@ -77,6 +77,17 @@
    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor">
    </bean>
 
+   <bean id="imagenBean" class="com.aguacate.aguacate.model.Imagen">
+    <constructor-arg index="0" value="${imagen.id}"></constructor-arg>
+    <constructor-arg index="1" value="${imagen.nombre}"></constructor-arg>
+    <property name="altura" value="${imagen.altura}"></property>
+    <property name="anchura" value="${imagen.anchura}"></property>
+   </bean>
 
+   <bean id="myBeanPostProcessorBean" class="com.aguacate.aguacate.model.MyBeanPostProcessor">
+   </bean>
+
+   <bean id="myBeanX" class="com.aguacate.aguacate.model.X">
+   </bean>
 
 </beans>
