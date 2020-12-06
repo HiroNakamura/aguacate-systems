@@ -73,6 +73,18 @@
         <property name="mySite" ref="mySiteBean"></property>
    </bean>
 
+   <context:annotation-config></context:annotation-config>
+
+   <bean id="napolesBean" class="com.aguacate.aguacate.model.Napoles">
+     <qualifier value="napolesQualifier"></qualifier>
+   </bean>
+
+   <bean id="jugadorBean" class="com.aguacate.aguacate.model.Jugador">
+     <property name="numero" value="${equipo.numero}"></property>
+     <property name="nombre" value="${equipo.nombre}"></property>
+     <property name="equipo" ref="napolesBean"></property>
+   </bean>
+
 
    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor">
    </bean>

@@ -13,6 +13,7 @@ import com.aguacate.aguacate.configurator.Configurator;
 import com.aguacate.aguacate.interfaces.Datos;
 import com.aguacate.aguacate.interfaces.Greeter;
 import com.aguacate.aguacate.interfaces.Generador;
+import com.aguacate.aguacate.interfaces.IEquipo;
 import com.aguacate.aguacate.model.Contenedor;
 import com.aguacate.aguacate.model.Alumno;
 import com.aguacate.aguacate.model.AlumnoBean;
@@ -23,6 +24,7 @@ import com.aguacate.aguacate.model.Individuo;
 import com.aguacate.aguacate.model.Empresa;
 import com.aguacate.aguacate.model.Imagen;
 import com.aguacate.aguacate.model.X;
+import com.aguacate.aguacate.model.Jugador;
 import com.aguacate.aguacate.contenedor.ContenedorServ;
 
 
@@ -64,6 +66,11 @@ public class AguacateApplication {
 
 		X my_x = (X) context.getBean("myBeanX");
 		System.out.println(my_x);
+
+		Jugador maradona = (Jugador) context.getBean("jugadorBean");
+		System.out.println(maradona);
+		maradona.mostrar();
+
 
 		((ConfigurableApplicationContext)context).close();
 
