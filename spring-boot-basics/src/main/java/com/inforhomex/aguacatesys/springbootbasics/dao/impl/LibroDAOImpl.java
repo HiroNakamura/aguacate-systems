@@ -17,33 +17,34 @@ public class LibroDAOImpl implements LibroDAO{
 
     private final String SQL_FIND_LIBRO = "select * from public.libro where id = ?";
 	private final String SQL_DELETE_LIBRO = "delete from public.libro where id = ?";
-	private final String SQL_UPDATE_LIBRO = "update public.libro set first_name = ?, last_name = ?, age  = ? where id = ?";
+	private final String SQL_UPDATE_LIBRO = "update public.libro set titulo = ?, isbn = ?, autor  = ?, editorial = ?, paginas= ? where id = ?";
 	private final String SQL_GET_ALL = "select * from public.libro";
-	private final String SQL_INSERT_LIBRO = "insert into public.libro(id, first_name, last_name, age) values(?,?,?,?)";
+	private final String SQL_INSERT_LIBRO = "insert into public.libro(titulo, isbn, autor, editorial, paginas) values(?,?,?,?,?) ";
 
 	@Autowired
 	public LibroDAOImpl(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 
+
 	public Libro getLibroById(int id) {
-		return null;//jdbcTemplate.queryForObject(SQL_FIND_LIBRO, new Object[] { id }, new LibroMapper());
+		return this.jdbcTemplate.queryForObject(SQL_FIND_LIBRO, new Object[] { id }, new LibroMapper());
 	}
 
 	public List<Libro> getAllLibros() {
-		return null;//jdbcTemplate.query(SQL_GET_ALL, new LibroMapper());
+		return this.jdbcTemplate.query(SQL_GET_ALL, new LibroMapper());
 	}
 
 	public boolean deleteLibro(Libro libro) {
-		return false;//jdbcTemplate.update(SQL_DELETE_LIBRO, libro.getId()) > 0;
+		return this.jdbcTemplate.update(SQL_DELETE_LIBRO, libro.getId()) > 0;
 	}
 
 	public boolean updateLibro(Libro libro) {
-		return false;//jdbcTemplate.update(SQL_UPDATE_LIBRO, libro.getFirstName(), person.getLastName(), person.getAge(),person.getId()) > 0;
+		return this.jdbcTemplate.update(SQL_UPDATE_LIBRO, libro.getTitulo(), libro.getIsbn(), libro.getAutor(),libro.getEditorial(), libro.getPaginas(),libro.getId()) > 0;
 	}
 
 	public boolean createLibro(Libro libro) {
-		return false;//jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getId(), person.getFirstName(), person.getLastName(),person.getAge()) > 0;
+		return this.jdbcTemplate.update(SQL_INSERT_LIBRO, libro.getTitulo(), libro.getIsbn(), libro.getAutor(),libro.getEditorial(), libro.getPaginas()) > 0;
 	}
 
 }
