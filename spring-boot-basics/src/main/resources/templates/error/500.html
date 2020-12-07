@@ -4,47 +4,50 @@
       xmlns:th="http://www.thymeleaf.org">
     <head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>404</title>
+ <head>
+  <meta charset="utf-8"/> 
+  <title>500</title>
   <style type="text/css">
   	p.color{
-      font-size: 324px;
-      position: relative;
-      top: -1041px;
-      left: 461px;
-      color: #B40486;
+  		font-size: 322px; 
+      position: relative; 
+      top: -1033px; 
+      left: 546px; 
+      color: #C8FE2E;
   	}
 
   	p.sombra{
   		font-size: 322px; 
       position: relative; 
-      top: -344px; 
-      left: 472px; 
+      top: -333px; 
+      left: 555px; 
       color: #000000;
   	}
 
   	#error{
-  		position: relative;
-  		top: -1409px;
-  		left: 402px;
-  		font-size: 40px;
-  		font-family: Courier;
+  		position: relative; 
+      top: -1358px; 
+      left: 297px; 
+      font-size: 40px; 
+      font-family: Courier;
   	}
 
   	body{
-          background-color: #F7FE2E;
-          height: 100%;
-          overflow: hidden;
+  		background-color: #088A08;
+  		/*quitar scroll*/
+  		height: 100%;
+  		overflow: hidden;
     }
     
     #regreso{
       position: relative;
-      top: -1381px;
+      top: -1352px;
       left: 50%;
     }
 
     #regreso a{
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: #585858;
+      color:white;
       font-size: 30px;
       text-decoration: none;
     }
@@ -52,10 +55,10 @@
   </style>
   </head>
   <body>
-  <p class="sombra">404</p>
-  <p class="color">404</p>
+  <p class="sombra">500</p>
+  <p class="color">500</p>
  
-  <span id="error">Error, recurso no encontrado.</span>
+  <span id="error">Error, el servidor ha tenido un problema.</span>
   <div id="regreso"><a th:href="@{/app/index}"> >>Regresar al home</a></div>
   </body>
   </html>

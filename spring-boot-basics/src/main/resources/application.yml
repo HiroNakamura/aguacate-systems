@@ -15,6 +15,7 @@ spring:
      enabled: true
      encoding: UTF-8
      suffix: .html
+     prefix: classpath:/templates/
 #Postgres
    #datasource:
     #  url: jdbc:postgresql://localhost:5432/curso

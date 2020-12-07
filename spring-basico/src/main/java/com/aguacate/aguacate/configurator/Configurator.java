@@ -12,6 +12,9 @@ import com.aguacate.aguacate.model.GeneradorXML;
 import com.aguacate.aguacate.model.GeneradorPDF;
 import com.aguacate.aguacate.interfaces.Generador;
 
+import com.aguacate.aguacate.interfaces.IEquipo;
+import com.aguacate.aguacate.interfaces.impl.RiverPlate;
+
 import com.aguacate.aguacate.model.HolaMundo;
 
 @Configuration
@@ -40,6 +43,11 @@ public class Configurator{
     @Bean(name="generadorXMLBean")
     public Generador generadorXML(){
         return new GeneradorXML();
+    }
+
+    @Bean(name="riverPlateBean")
+    public IEquipo riverPlate(){
+        return new RiverPlate();
     }
 
 }

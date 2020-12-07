@@ -32,14 +32,14 @@ import com.aguacate.aguacate.contenedor.ContenedorServ;
 public class AguacateApplication {
 
 	public static void main(String[] args) {
-		//Esto se comenta cuando se usa XML
+		//Esto se comenta cuando se usa XML o configuracion x Annotaciones
 		//SpringApplication.run(AguacateApplication.class, args);
 		
 		//testA();
 		//testB();
-		//testC();
+		testC();
 		//testD();
-		testE();
+		//testE();
 	}
 
 	public static void testE(){
@@ -120,6 +120,10 @@ public class AguacateApplication {
 		Generador xml = (Generador) context.getBean("generadorXMLBean");
 		pdf.generar("InformePelicano.pdf");
 		pdf.generar("ReportePeliminario.xml");
+
+		IEquipo river = (IEquipo) context.getBean("riverPlateBean");
+		System.out.println(river.mostrar());
+		((ConfigurableApplicationContext)context).close();
 	}
 
 	public static void testB(){
@@ -127,6 +131,7 @@ public class AguacateApplication {
 		Greeter obj = (Greeter) context.getBean("greeterBean");
 		obj.saludar("");
 		obj.saludar("Mariana");
+		((ConfigurableApplicationContext)context).close();
 	}
 
 	public static void testA() {
