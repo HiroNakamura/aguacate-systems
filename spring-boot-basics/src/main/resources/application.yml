@@ -16,6 +16,11 @@ spring:
      encoding: UTF-8
      suffix: .html
      #prefix: classpath:/templates/views/
+   data:
+    mongodb: 
+      host: localhost
+      port: 27017
+      database: mensajes
 
 
 #Postgres
