@@ -16,6 +16,28 @@
     <body>
         <div class="container">
             <h1>Libros</h1>
+            <table  class="table table-dark table-hover" align="center" border="0" dt:table="true">
+                <thead >
+                    <tr>
+                        <th>Id</th>
+                        <th>T&iacute;tulo</th>
+                        <th>ISBN</th>
+                        <th>Autor</th>
+                        <th>Editorial</th>
+                        <th>No. p&aacute;ginas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="libro : ${libros}">
+                        <td th:text="${libro?.id}"></td>
+                        <td th:text="${libro?.titulo}"></td>
+                        <td th:text="${libro?.isbn}"></td>
+                        <td th:text="${libro?.autor}"></td>
+                        <td th:text="${libro?.editorial}"></td>
+                        <td th:text="${libro?.paginas}"></td>
+                    </tr>
+                </tbody>
+            </table>
           </div>
         <div th:include="layout/footer"></div>
     </body>

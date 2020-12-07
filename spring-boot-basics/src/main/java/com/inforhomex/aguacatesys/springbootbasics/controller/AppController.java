@@ -35,7 +35,7 @@ public class AppController{
     public ModelAndView libros(){
     	ModelAndView mav = new ModelAndView(LIBROS);
         mav.addObject("titulo",new String("Librería de libros"));
-        //mav.addObject("libros", this.servicioLibros.getAllObjects());
+        mav.addObject("libros", this.servicioLibros.getAllObjects());
     	return mav;
     }
 
