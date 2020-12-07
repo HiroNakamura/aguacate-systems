@@ -31,11 +31,11 @@ public class AppController{
     }
 
     //http://localhost:8081/app/libros
-    @GetMapping("/libros")
+    @GetMapping("libros")
     public ModelAndView libros(){
     	ModelAndView mav = new ModelAndView(LIBROS);
         mav.addObject("titulo",new String("Librería de libros"));
-        mav.addObject("libros", this.servicioLibros.getAllObjects());
+        //mav.addObject("libros", this.servicioLibros.getAllObjects());
     	return mav;
     }
 
