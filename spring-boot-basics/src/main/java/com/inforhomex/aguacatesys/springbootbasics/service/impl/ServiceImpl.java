@@ -25,4 +25,10 @@ public class ServiceImpl implements IService<Libro>{
     public List<Libro> getAllObjects(){
         return this.jdbcTemplate.query(SQL_GET_ALL, new LibroMapper());
     }
+
+    @Override
+    public List<Map<String,Object>> getAllMensajes(){
+        return null;
+    }
+    
 }
