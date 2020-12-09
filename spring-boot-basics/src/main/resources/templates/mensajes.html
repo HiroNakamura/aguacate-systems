@@ -20,21 +20,15 @@
                 <thead >
                     <tr>
                         <th>Id</th>
-                        <th>T&iacute;tulo</th>
-                        <th>ISBN</th>
-                        <th>Autor</th>
-                        <th>Editorial</th>
-                        <th>No. p&aacute;ginas</th>
+                        <th>Idioma</th>
+                        <th>Mensaje</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="libro : ${libros}">
-                        <td th:text="${libro?.id}"></td>
-                        <td th:text="${libro?.titulo}"></td>
-                        <td th:text="${libro?.isbn}"></td>
-                        <td th:text="${libro?.autor}"></td>
-                        <td th:text="${libro?.editorial}"></td>
-                        <td th:text="${libro?.paginas}"></td>
+                    <tr th:each="mensaje : ${mensajes}">
+                        <td th:text="${mensaje?.id}"></td>
+                        <td th:text="${mensaje?.idioma}"></td>
+                        <td th:text="${mensaje?.mensaje}"></td>
                     </tr>
                 </tbody>
             </table>
