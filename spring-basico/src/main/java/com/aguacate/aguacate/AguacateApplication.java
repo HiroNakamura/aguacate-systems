@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.ImportResource;
 
 import com.aguacate.aguacate.configurator.Configurator;
 import com.aguacate.aguacate.interfaces.Datos;
@@ -28,6 +29,7 @@ import com.aguacate.aguacate.model.Jugador;
 import com.aguacate.aguacate.contenedor.ContenedorServ;
 
 
+@ImportResource(locations = {"classpath:application-context.xml"})
 @SpringBootApplication
 public class AguacateApplication {
 
@@ -37,7 +39,7 @@ public class AguacateApplication {
 		
 		//testA();
 		//testB();
-		testC();
+		//testC();
 		//testD();
 		//testE();
 	}
