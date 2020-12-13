@@ -1,0 +1,6 @@
+server:
+   port: 9080
+
+banner:
+   charset: UTF-8
+   location: banner.txt
