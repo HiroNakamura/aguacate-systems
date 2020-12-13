@@ -23,4 +23,10 @@ public class MqspringApplication implements CommandLineRunner {
 		SpringApplication.run(MqspringApplication.class, args);
 	}
 
+	@Override
+    public void run(String... args) throws Exception {
+    	System.out.println("Ejecutando MqspringApplication...");
+    	System.out.println("Pojo: "+this.pojo.toString());
+    }
+
 }
