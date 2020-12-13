@@ -1,7 +1,6 @@
 package hello;
 
 import javax.jms.ConnectionFactory;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
@@ -42,6 +41,8 @@ public class Application {
 		JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 		System.out.println("Enviando email...");
 		jmsTemplate.convertAndSend("mailbox", new Email(EMAIL, MENSAJE));
+
+		//context.close();
 	}
 
 }
