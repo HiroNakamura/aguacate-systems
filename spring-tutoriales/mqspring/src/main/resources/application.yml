@@ -4,3 +4,6 @@ server:
 banner:
    charset: UTF-8
    location: banner.txt
+
+
+sample-value: Este es un valor desde el archivo de propiedades
