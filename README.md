@@ -46,6 +46,8 @@ Links útiles:
 
 * [SPRING BOOT TUTORIAL](https://www.springboottutorial.com/)
 
+* [https://www.arquitecturajava.com/](https://www.arquitecturajava.com/)
+
 
 [Editor de la página](https://github.com/HiroNakamura/aguacate-systems/edit/gh-pages/index.md)
 [Mardown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)
